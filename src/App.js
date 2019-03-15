@@ -1,30 +1,23 @@
-import React, { Component } from 'react';
-import { Container, Button, } from 'semantic-ui-react';
 
+    
+import React, { Component } from 'react';
+import './App.css';
+import RPS from './RPS'
+import { Container, Header, Icon } from 'semantic-ui-react'
 
 class App extends Component {
-  state = { 
-    Rock: "rock",
-    Paper: "paper",
-    Scissors: "scissors"
-    }
-
-    userChoice = () => {
-    
-    }
-
-    handleClick = () => {
-      
-    }
-
   render() {
     return (
-      <Container>
-        <Button color="blue" onClick={() => this.userChoice() }>Rock</Button>
-        <Button color="blue" onClick={() => this.userChoice() }>Paper</Button>
-        <Button color="blue" onClick={() => this.userChoice() }>Scissors</Button>
+      <Container className="App">
+        <Header as='h1' icon >
+          <Icon name='hand rock outline' circular />
+          <Header.Content>Rock, Paper, Scissors</Header.Content>
+        </Header>
+        <br />
+        <span>Click a Hand to Make Your Choice</span>
+        <hr />
+        <RPS />
       </Container>
-   
     );
   }
 }
